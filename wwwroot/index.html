@@ -24,41 +24,20 @@
 				</ul>
 			</div>
 		</div>
-		<div ng-controller="StudentController" class="container">
-			<table class="table table-striped">
-				<thead>
-					<tr>
-						<th class="text-center">#</th>
-						<th class="text-center">First Name</th>
-						<th class="text-center">Last Name</th>
-						<th class="text-center">Join at</th>
-						<th class="text-center"></th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr ng-repeat="student in students">
-						<td class="text-center">{{ student.Id }}</td>
-						<td class="text-left">{{ student.FirstName }}</td>
-						<td class="text-center">{{ student.LastName }}</td>
-						<td class="text-center"> {{ student.JoinAt | date }}</td>
-						<td class="text-center">
-							<div class="btn-group">
-								<a href="#/students/details/{{ student.Id }}" class="btn btn-info btn-sm"><i class="fa fa-list"></i></a>
-								<a href="#/students/edit/{{ student.Id }}" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></a>
-								<a href="#/students/delete/{{ student.Id }}" class="btn btn-danger btn-sm"><i class="fa fa-remove"></i></a>
-							</div>
-						</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
+		<div ng-view class="container"></div>
+		
+		
 		<script src="/lib/jquery/dist/jquery.min.js"></script>
 		<script src="/lib/bootstrap/dist/js/bootstrap.min.js"></script>
 		<script src="/lib/angular/angular.min.js"></script>
 		<script src="/lib/angular-route/angular-route.min.js"></script>
 		<script src="/app/module.js"></script>
 		<script src="/app/routes.js"></script>
-		<script src="/app/controllers/students/students.js"></script>
+		<script src="/app/controllers/students/students-list.js"></script>
+		<script src="/app/controllers/students/students-create.js"></script>
+		<script src="/app/controllers/students/students-edit.js"></script>
+		<script src="/app/controllers/students/students-delete.js"></script>
+		<script src="/app/controllers/students/students-details.js"></script>
 	</body>
 
 </html>

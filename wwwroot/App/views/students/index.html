@@ -1,3 +1,31 @@
-<h1>
-	Home app!!
-</h1>
+<div class="container">
+	<a href="#/students/create/" class="btn btn-info btn-sm"><i class="fa fa-list"></i>Add student</a>
+</div>
+<div class="container">
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th class="text-center">Id</th>
+				<th class="text-center">First Name</th>
+				<th class="text-center">Last Name</th>
+				<th class="text-center">Join at</th>
+				<th class="text-center"></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="student in students">
+				<td class="text-center">{{ student.Id }}</td>
+				<td class="text-left">{{ student.FirstName }}</td>
+				<td class="text-center">{{ student.LastName }}</td>
+				<td class="text-center">{{ student.JoinAt | date }}</td>
+				<td class="text-center">
+					<div class="btn-group">
+						<a href="#/students/details/{{ student.Id }}" class="btn btn-info btn-sm"><i class="fa fa-list"></i>Detail</a>
+						<a href="#/students/edit/{{ student.Id }}" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i>Edit</a>
+						<a href="#/students/delete/{{ student.Id }}" class="btn btn-danger btn-sm"><i class="fa fa-remove"></i>Delete</a>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

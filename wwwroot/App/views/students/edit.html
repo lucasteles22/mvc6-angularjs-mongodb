@@ -1,0 +1,14 @@
+<h3>Edit Student</h3>
+<form>
+	<div class="form-group">
+		<label>First name</label>
+		<input type="text" class="form-control" ng-model="student.FirstName" placeholder="Student's first name">
+	</div>
+	<div class="form-group">
+		<label>Last name</label>
+		<input type="text" class="form-control" ng-model="student.LastName" placeholder="Student's last name">
+	</div>	
+	<input type="hidden" ng-model="student.JoinAt">
+	<a href="#/" class="btn btn-default">Back</a>
+	<button type="button" class="btn btn-success pull-right" ng-click="submit()">Save</button>
+</form>

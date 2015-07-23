@@ -1,0 +1,18 @@
+<h3>Student's details</h3>
+<dl>
+  <dt>First Name</dt>
+  <dd>{{ student.FirstName }}</dd>
+  <br>
+  <dt>Last Name</dt>
+  <dd>{{ student.LastName }}</dd>
+  <br>
+  <dt>Join at</dt>
+  <dd>{{ student.JoinAt | date }}</dd>
+</dl>
+
+<a href="#/students" class="btn btn-default">Back</a>
+  
+<div class="btn-group pull-right">
+  <a href="#/students/edit/{{ student.Id }}" class="btn btn-primary"><i class="fa fa-edit"></i> Edit</a>
+  <a href="#/students/delete/{{ student.Id }}" class="btn btn-danger"><i class="fa fa-remove"></i> Delete</a>
+</div>
